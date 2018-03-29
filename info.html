@@ -8,6 +8,8 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!-- Use echarts.js -->
+                <script src="echarts.min.js"></script>
 	</head>
 	<body>
 		<!-- Wrapper -->
@@ -148,7 +150,94 @@
 													</tr>
 												</table>
 											</div>
-											
+											<!-- Break -->
+											<div class="12u 12u$(small)">
+												<div id="mybar01"></div>
+<script>
+option = {
+    title: {
+        text: 'No. of WHV granted to Hongkongers from 2014 to 2016',
+        subtext: 'LegCo Report 2017'
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['New Zealand','Australia','Ireland','Germany','Japan','Canada','Korea','France','United Kingdom','Austria'],
+        bottom:0
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: ['2014','2015','2016']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [
+        {
+            name:'New Zealand',
+            type:'line',
+            data:[403, 401, 400]
+        },
+        {
+            name:'Australia',
+            type:'line',
+            data:[10511, 8503, 5269]
+        },
+        {
+            name:'Ireland',
+            type:'line',
+            data:[100, 54, 75]
+        },
+        {
+            name:'Germany',
+            type:'line',
+            data:[260, 164, 124]
+        },
+        {
+            name:'Japan',
+            type:'line',
+            data:[256, 253, 618]
+        },
+        {
+            name:'Canada',
+            type:'line',
+            data:[300, 163, 136]
+        },
+        {
+            name:'Korea',
+            type:'line',
+            data:[274, 282, 260]
+        },
+        {
+            name:'France',
+            type:'line',
+            data:[65, 54, 59]
+        },
+        {
+            name:'United Kingdom',
+            type:'line',
+            data:[1054, 1236, 1153]
+        },
+        {
+            name:'Austria',
+            type:'line',
+            data:[0, 24, 11]
+        }
+    ]
+};
+// Use the option to display chart
+        var myChart1 = echarts.init(document.getElementById('mybar01'));
+        myChart1.setOption(option);	
+</script>
+											</div>
 											
 											
 											
