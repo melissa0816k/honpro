@@ -6,8 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<!-- Use echarts.js -->
                 <script src="echarts.min.js"></script>
 	</head>
@@ -153,90 +153,103 @@
 											<!-- Break -->
 											<div class="12u 12u$(small)">
 												<div id="mybar01"></div>
-<script>
+												<script>
 option = {
-    title: {
+    legend: {
+        bottom: 0,
+        data: ['New Zealand', 'Australia','Ireland','Germany','Japan','Canada','Korea','France','United Kingdom','Austria']
+    },
+    title : {
         text: 'No. of WHV granted to Hongkongers from 2014 to 2016',
         subtext: 'LegCo Report 2017'
     },
-    tooltip: {
-        trigger: 'axis'
-    },
-    legend: {
-        data:['New Zealand','Australia','Ireland','Germany','Japan','Canada','Korea','France','United Kingdom','Austria'],
-        bottom:0
+    tooltip : {
+        trigger: 'axis',
+        axisPointer : {            
+            type : 'shadow'        
+        }
     },
     grid: {
         left: '3%',
         right: '4%',
-        bottom: '3%',
+        bottom: '10%',
         containLabel: true
     },
-    xAxis: {
-        type: 'category',
-        boundaryGap: false,
-        data: ['2014','2015','2016']
+    xAxis:  {
+        type: 'value'
     },
     yAxis: {
-        type: 'value'
+        type: 'category',
+        data: ['2014','2015','2016']
     },
     series: [
         {
-            name:'New Zealand',
-            type:'line',
-            data:[403, 401, 400]
+            name: 'New Zealand',
+            type: 'bar',
+            stack: '总量',
+            data: [403, 401, 400]
         },
         {
-            name:'Australia',
-            type:'line',
-            data:[10511, 8503, 5269]
+            name: 'Australia',
+            type: 'bar',
+            stack: '总量',
+            data: [10511, 8503, 5269]
         },
         {
-            name:'Ireland',
-            type:'line',
-            data:[100, 54, 75]
+            name: 'Ireland',
+            type: 'bar',
+            stack: '总量',
+            data: [220, 182, 191]
         },
         {
-            name:'Germany',
-            type:'line',
-            data:[260, 164, 124]
+            name: 'Germany',
+            type: 'bar',
+            stack: '总量',
+            data: [150, 212, 201]
         },
         {
-            name:'Japan',
-            type:'line',
-            data:[256, 253, 618]
+            name: 'Japan',
+            type: 'bar',
+            stack: '总量',
+            data: [820, 832, 901]
+        }, 
+        {
+            name: 'Canada',
+            type: 'bar',
+            stack: '总量',
+            data: [300, 163, 136]
         },
         {
-            name:'Canada',
-            type:'line',
-            data:[300, 163, 136]
+            name: 'Korea',
+            type: 'bar',
+            stack: '总量',
+            data: [274, 282, 260]
         },
         {
-            name:'Korea',
-            type:'line',
-            data:[274, 282, 260]
+            name: 'France',
+            type: 'bar',
+            stack: '总量',
+            data: [65, 54, 59]
         },
         {
-            name:'France',
-            type:'line',
-            data:[65, 54, 59]
+            name: 'United Kingdom',
+            type: 'bar',
+            stack: '总量',
+            data: [1054, 1236, 1153]
         },
         {
-            name:'United Kingdom',
-            type:'line',
-            data:[1054, 1236, 1153]
-        },
-        {
-            name:'Austria',
-            type:'line',
-            data:[0, 24, 11]
+            name: 'Austria',
+            type: 'bar',
+            stack: '总量',
+            data: [0, 24, 11]
         }
     ]
 };
 // Use the option to display chart
         var myChart1 = echarts.init(document.getElementById('mybar01'));
-        myChart1.setOption(option);	
-</script>
+        myChart1.setOption(option);
+												</script>
+												
 											</div>
 											
 											
