@@ -8,6 +8,8 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!-- 引入 echarts.js -->
+                <script src="echarts.min.js"></script>
 	</head>
 	<body>
 		<!-- Wrapper -->
@@ -39,6 +41,125 @@
 									        <p>More young Hongkongers dream of swapping at least a few months for more fulfilling work overseas and it seems that the interest has been on the rise. </p></br>
 							                        <p>According to <a href="http://www.lwb.gov.hk/eng/legco/lwb-l-e-2017.pdf">the statistics from Labour Department</a>, since 2001, when Hong Kong government has established working holiday scheme(WHS), there have been more than  78,000 people aged from 18 to 30 participating in the scheme. </p></br>
                                                                                 <p>Under <a href="https://www.immd.gov.hk/eng/services/visas/working_holiday_scheme.html#firstTab&4&note1">the government’s working holiday scheme</a>, young locals are allowed to visit one of 12 partner countries (including Japan, South Korea, Austria, Australia, New Zealand, Ireland, England, Canada, Sweden, Germany, France and Hungry) for a year for work and pleasure. </p></br>
+				                                                <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="mybar01" style="width: 1250px;height:600px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('mybar01'));
+        // 指定图表的配置项和数据
+        var option = {
+    title : {
+        text: 'No. of WHV granted to young Hongkongers in 2016',
+        subtext: 'LegCo Report 2017',
+    },
+    tooltip: {
+        trigger: 'item',
+        formatter: "{a} <br/>{b}: {c} ({d}%)"
+    },
+    legend: {
+        orient: 'vertical',
+        x: 'right',
+        data:['Japan','Korea','Ireland','Germany','Canada','France','United Kingdom','Austria','New Zealand','Australia',]
+    },
+    series: [
+        {
+            name:'Partner economy',
+            type:'pie',
+            selectedMode: 'single',
+            radius: [0, '30%'],
+
+            label: {
+                normal: {
+                    position: 'inner'
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            data:[
+                {value:878, name:'Asia', selected:true},
+                {value:1558, name:'Europe'},
+                {value:5669, name:'Oceania'}
+            ]
+        },
+        {
+            name:'Partner economy',
+            type:'pie',
+            radius: ['40%', '55%'],
+            label: {
+                normal: {
+                    formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+                    borderColor: '#aaa',
+                    borderWidth: 1,
+                    borderRadius: 4,
+                    // shadowBlur:3,
+                    // shadowOffsetX: 2,
+                    // shadowOffsetY: 2,
+                    // shadowColor: '#999',
+                    // padding: [0, 7],
+                    rich: {
+                        a: {
+                            color: '#999',
+                            lineHeight: 22,
+                            align: 'center'
+                        },
+                        // abg: {
+                        //     backgroundColor: '#333',
+                        //     width: '100%',
+                        //     align: 'right',
+                        //     height: 22,
+                        //     borderRadius: [4, 4, 0, 0]
+                        // },
+                        hr: {
+                            borderColor: '#aaa',
+                            width: '100%',
+                            borderWidth: 0.5,
+                            height: 0
+                        },
+                        b: {
+                            fontSize: 16,
+                            lineHeight: 33
+                        },
+                        per: {
+                            color: '#eee',
+                            backgroundColor: '#334455',
+                            padding: [2, 4],
+                            borderRadius: 2
+                        }
+                    }
+                }
+            },
+            data:[
+                {value:618, name:'Japan'},
+                {value:260, name:'Korea'},
+                {value:75, name:'Ireland'},
+                {value:124, name:'Germany'},
+                {value:136, name:'Canada'},
+                {value:59, name:'France'},
+                {value:1153, name:'United Kingdom'},
+                {value:11, name:'Austria'},
+                {value:400, name:'New Zealand'},
+                {value:5269, name:'Australia'}
+            ]
+        }
+    ]
+};
+	    // Use the option to display chart
+        var myChart1 = echarts.init(document.getElementById('mybar01'));
+        myChart1.setOption(option);
+    </script>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 				                                                <p>A slower pace of life, accessible visas, better quality of life and larger activity spaces make those partner countries appealing for Hongkongers looking for a new place to live and work. </p></br>
 		                                                                <p>Dr Toru Horiuchi, an associate programme director of Global Studies in the Faculty of Social Science at the Chinese University of Hong Kong, said: “more young people want to get away from the polarizing political environment and a stressful city at least for a while.”  </p></br>
 	                                                                        <p>The new figures from the cost of living experts <a href="https://www.expatistan.com/cost-of-living/index/asia"> Expatistan.com </a> showed that Hong Kong is the most expensive city in Asia, with soaring rent above Singapore and Tokyo. The city is also ranked as 14th most expensive city in the world after Expatistan compared information from almost 261,000 users around the world to calculate average prices in 2,200 cities.</p></br>
