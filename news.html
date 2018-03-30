@@ -59,7 +59,7 @@
     legend: {
         orient: 'vertical',
         x: 'right',
-        data:['Japan','Korea','Ireland','Germany','Canada','France','United Kingdom','Austria','New Zealand','Australia']
+        data:['Japan','Korea','Canada','Ireland','Germany','France','United Kingdom','Austria','New Zealand','Australia']
     },
     series: [
         {
@@ -67,7 +67,6 @@
             type:'pie',
             selectedMode: 'single',
             radius: [0, '30%'],
-
             label: {
                 normal: {
                     position: 'inner'
@@ -80,7 +79,8 @@
             },
             data:[
                 {value:878, name:'Asia'},
-                {value:1558, name:'Europe'},
+                {value:136, name:'North America'},
+                {value:1422, name:'Europe'},
                 {value:5669, name:'Oceania'}
             ]
         },
@@ -128,9 +128,9 @@
             data:[
                 {value:618, name:'Japan'},
                 {value:260, name:'Korea'},
+                {value:136, name:'Canada'},
                 {value:75, name:'Ireland'},
                 {value:124, name:'Germany'},
-                {value:136, name:'Canada'},
                 {value:59, name:'France'},
                 {value:1153, name:'United Kingdom'},
                 {value:11, name:'Austria'},
