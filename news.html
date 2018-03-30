@@ -42,10 +42,10 @@
 							                        <p>According to <a href="http://www.lwb.gov.hk/eng/legco/lwb-l-e-2017.pdf">the statistics from Labour Department</a>, since 2001, when Hong Kong government has established working holiday scheme(WHS), there have been more than  78,000 people aged from 18 to 30 participating in the scheme. </p></br>
                                                                                 <p>Under <a href="https://www.immd.gov.hk/eng/services/visas/working_holiday_scheme.html#firstTab&4&note1">the government’s working holiday scheme</a>, young locals are allowed to visit one of 12 partner countries (including Japan, South Korea, Austria, Australia, New Zealand, Ireland, England, Canada, Sweden, Germany, France and Hungry) for a year for work and pleasure. </p></br>
 				                                                <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="mybar01" style="width: 1250px;height:600px;"></div>
+    <div id="mybar02" style="width: 1250px;height:600px;"></div>
     <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('mybar01'));
+        var myChart = echarts.init(document.getElementById('mybar02'));
         // 指定图表的配置项和数据
         var option = {
     title : {
@@ -59,7 +59,7 @@
     legend: {
         orient: 'vertical',
         x: 'right',
-        data:['Japan','Korea','Ireland','Germany','Canada','France','United Kingdom','Austria','New Zealand','Australia',]
+        data:['Japan','Korea','Ireland','Germany','Canada','France','United Kingdom','Austria','New Zealand','Australia']
     },
     series: [
         {
@@ -90,7 +90,7 @@
             radius: ['40%', '55%'],
             label: {
                 normal: {
-                    formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+                    formatter: '{a|{a}}{abg|}\n{hr|}\n {b|{b}：}{c} {per|{d}%}',
                     borderColor: '#aaa',
                     borderWidth: 1,
                     borderRadius: 4,
@@ -135,7 +135,7 @@
     ]
 };
 	    // Use the option to display chart
-        var myChart1 = echarts.init(document.getElementById('mybar01'));
+        var myChart1 = echarts.init(document.getElementById('mybar02'));
         myChart1.setOption(option);
     </script>
 				
