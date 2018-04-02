@@ -164,7 +164,9 @@
 									</div>
 								</section>
 							<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    							<div id="mybar01" style="width: 1250px;height:600px;"></div>
+<div class="container-fluid">
+<div class="row"> 
+<div id="mybar01" style="width: 1250px;height:600px;"></div>
     <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('mybar01'));
@@ -265,6 +267,8 @@
         var myChart1 = echarts.init(document.getElementById('mybar01'));
         myChart1.setOption(option);
     </script>
+	</div>
+							</div>
 
 						</div>
 					</div>
