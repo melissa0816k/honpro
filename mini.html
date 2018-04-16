@@ -27,25 +27,26 @@ input {
   margin: 5px 10px;
 }
 button {
-  font-size: 18px;
+  font-size: 16px;
   padding: 10px;
-  margin: 20px 0;
+  margin: 18px 0;
   color: white;
   border: 0;
-  border-radius: 10px;
-  border-bottom: 3px solid #333;
+  border-radius: 8px;
+  border-bottom: 2px solid #333;
 }
 #submit {
-  background: pink;
+  background: black;
 }
 #reset {
-  background: brown;
+  background: red;
 }
 #answer {
   border: 1px dashed #ccc;
   background: #eee;
-  padding: 10px;
+  padding: 8px;
 }
+
 		</style>
 		<script>
 			// function to calculate the result of the survey
@@ -56,6 +57,7 @@ function tabulateAnswers() {
   var c2score = 0;
   var c3score = 0;
   var c4score = 0;
+  var choiceString = "";
   
   // get a list of the radio inputs on the page
   var choices = document.getElementsByTagName('input');
@@ -64,17 +66,27 @@ function tabulateAnswers() {
     // if the radio is checked..
     if (choices[i].checked) {
       // add 1 to that choice's score
-      if (choices[i].value == 'c1') {
-        c1score = c1score + 1;
+      if (choices[i].value === 'c1') {
+        choiceString += "a";
+        //c1score = c1score + 1;
       }
-      if (choices[i].value == 'c2') {
-        c2score = c2score + 1;
+      if (choices[i].value === 'c2') {
+        choiceString += "b";
+        //c2score = c2score + 1;
       }
-      if (choices[i].value == 'c3') {
-        c3score = c3score + 1;
+      if (choices[i].value ==='c3') {
+        choiceString += "c";
+        //c3score = c3score + 1;
       }
-      if (choices[i].value == 'c4') {
-        c4score = c4score + 1;
+      if (choices[i].value === 'c4') {
+        choiceString += "d";
+        //c4score = c4score + 1;
+      }
+      if (choices[i].value === 'c5') {
+        choiceString += "e";
+      }
+      if (choices[i].value === 'c6') {
+        choiceString += "f";
       }
       // If you add more choices and outcomes, you must add another if statement below.
     }
@@ -82,22 +94,41 @@ function tabulateAnswers() {
   
   // Find out which choice got the highest score.
   // If you add more choices and outcomes, you must add the variable here.
-  var maxscore = Math.max(c1score,c2score,c3score,c4score);
+  //var maxscore = Math.max(c1score,c2score,c3score,c4score);
   
   // Display answer corresponding to that choice
+  console.log("The string of your choices: " + choiceString);
   var answerbox = document.getElementById('answer');
-  if (c1score == maxscore) { // If user chooses the first choice the most, this outcome will be displayed.
-    answerbox.innerHTML = "You are a computer researcher! You will enjoy developing algorithms, and doing things with computers no one else has done before. For example, researchers sent a robot to the moon, built a computer to beat the best humans in Jeopardy, and are creating robots to do your chores for you. Computer researchers typically go to college and work at universities, or as a part of the research and development team in companies.";
+  if (choiceString == "aaaa"|| choiceString == "aaba"|| choiceString == "aaca"|| choiceString == "aada"|| choiceString == "aaea"|| choiceString == "aafa") { // If user chooses the first choice the most, this outcome will be displayed.
+    answerbox.innerHTML = "You may consider <b>Australia or New Zealand</b> as your destination where you can enjoy an array of the farming activities such as fruit picking and farming cattles. But bear in mind that you have to be careful when you're going to do a solo working holiday in Australia, espeically if you're female.";
   }
-  if (c2score == maxscore) { // If user chooses the second choice the most, this outcome will be displayed.
-    answerbox.innerHTML = "You are an altruistic coder! You love to help people and feel the positive impact of your work every day. Altrustic coders are out there every day making the world a better place. Computer scientists write software to more effectively help doctors diagnose illnesses such as cancer, connect people in third world countries to education and medical resources on the internet, code websites and software for nonprofit organizations, and much more!";
+  else if (choiceString == "aaab"|| choiceString == "aaac"|| choiceString == "aaad"|| choiceString == "aaae"|| choiceString == "aabb"|| choiceString == "aabc"|| choiceString == "aabd"|| choiceString == "aabe"|| choiceString == "aacb"|| choiceString == "aacc"|| choiceString == "aacd"|| choiceString == "aace"|| choiceString == "aadb"|| choiceString == "aadc"|| choiceString == "aadd"|| choiceString == "aade"|| choiceString == "aaeb"|| choiceString == "aaec"|| choiceString == "aaed"|| choiceString == "aaee"|| choiceString == "aafb"|| choiceString == "aafc"|| choiceString == "aafd"|| choiceString == "aafe") { // If user chooses the second choice the most, this outcome will be displayed.
+    answerbox.innerHTML = "You may consider <b>Australia or New Zealand</b> as your destination. They are noted for the beautiful beaches and wild animals such as kiwis and koalas. So if you have some free time, it's always a good idea to visit some lovely islands  of pristine forests. People there speak English and you'll met quite a large number of Asian people, espeically Chinese people there.";
   }
-  if (c3score == maxscore) { // If user chooses the third choice the most, this outcome will be displayed.
-    answerbox.innerHTML = "You are a developer! Developers create games, apps, social media, movies, and all sorts of fun programs that people enjoy. These coders work on projects such as Minecraft, Poptropica, and Youtube. Developers need sharp coding skills, are great debuggers, and need to work well in a team of other developers.";
+  else if (choiceString == "bbdb"|| choiceString == "bbdc"|| choiceString == "bbdd"|| choiceString == "bbde"|| choiceString == "bbbb"|| choiceString == "bbbc"|| choiceString == "bbbd"|| choiceString == "bbbe"|| choiceString == "bbab"|| choiceString == "bbac"|| choiceString == "bbad"|| choiceString == "bbae"|| choiceString == "bbcb"|| choiceString == "bbcc"|| choiceString == "bbcd"|| choiceString == "bbce"|| choiceString == "bbfb"|| choiceString == "bbfc"|| choiceString == "bbfd"|| choiceString == "bbfe") { // If user chooses the second choice the most, this outcome will be displayed.
+    answerbox.innerHTML = "You may consider either <b>Japan or South Korea</b> as your destination whose lifestyle is a bit similar to Hong Kong's because Asian countries share a lot of cultural similarities. If you don't speak Japanese or Korean, you can try to look for a job in the capital city where more people are able to speak English and communicate with you well. Both Tokyo and Seoul have a good public transport system and city development.";
   }
-  if (c4score == maxscore) { // If user chooses the fourth choice the most, this outcome will be displayed.
-    answerbox.innerHTML = "You are the future CEO of a new startup! You enjoy taking risks and building the next big thing that no one has even thought of before. For example, billionare Mark Zuckerberg founded Facebook in 2004, a project he started inside his dorm room in college which eventually turned into a social networking revolution that changed the world.";
+   else if (choiceString == "bbea"|| choiceString == "bbeb"|| choiceString == "bbec"|| choiceString == "bbed"|| choiceString == "bbee"|| choiceString == "bbaa"|| choiceString == "bbba"|| choiceString == "bbca"|| choiceString == "bbda"|| choiceString == "bbfa") { // If user chooses the third choice the most, this outcome will be displayed.
+    answerbox.innerHTML = "You may consider either <b>Japan or South Korea</b> as your destination whose lifestyle is a bit similar to Hong Kong's because Asian countries share a lot of cultural similarities. You probably prefer the life in a small town than a big city life. But you have to be familiar with their languages. If you don't know how to speak Japanese or Korean, you'll find it difficult to find a job.";
   }
+  else if (choiceString == "acab"|| choiceString == "acac"|| choiceString == "acad"|| choiceString == "acae"|| choiceString == "acbb"|| choiceString == "acbc"|| choiceString == "acbd"|| choiceString == "acbe"|| choiceString == "acdb"|| choiceString == "acdc"|| choiceString == "acdd"|| choiceString == "acde"|| choiceString == "acba"|| choiceString == "acda"|| choiceString == "acaa") { // If user chooses the third choice the most, this outcome will be displayed.
+    answerbox.innerHTML = "You may consider <b>United Kingdom</b> as your destination. Without doubts, European people tend to be less stressed out by working, compared to the workers in Hong Kong. And you can take advantage of your language ability when looking for a job in United Kingdom. If you can speak both English and Chinese, especially Mandarin, you'll get higher chance to be hired. Among all European countries, United Kingdom is probably an ideal destination for you.";
+  }
+   else if (choiceString == "acfa"|| choiceString == "acfb"|| choiceString == "acfc"|| choiceString == "acfd"|| choiceString == "acfe" ) { // If user chooses the second choice the most, this outcome will be displayed.
+    answerbox.innerHTML = "You have to be extra careful when you travel in Europe because we've seen terrorist attacks at major events, tourist sites, restaurants, commercial centres and transportation hubs. However, as long as you play safe, you'll be fine no matter where you are.";
+  }
+   else if (choiceString == "acca"|| choiceString == "accb"|| choiceString == "accc"|| choiceString == "accd"|| choiceString == "acce") { // If user chooses the second choice the most, this outcome will be displayed.
+    answerbox.innerHTML = "You may consider <b>Hungary</b> as your destination where you can find a cheaper apartment or room to rent. Even though people there speak primarily Hungarian and you won't find much in the way of deep or subtle conversation, most of them speak more than enough English for you to get by comfortably";
+  }
+   else if (choiceString == "acea"|| choiceString == "aceb"|| choiceString == "acec"|| choiceString == "aced"|| choiceString == "acee") { // If user chooses the second choice the most, this outcome will be displayed.
+    answerbox.innerHTML = "You may consider either <b>Sweden</b> as your destination which is famous for the beautiful nature such as the lakes, mountains and valleys.";
+  }
+  else if (choiceString == "adaa" || choiceString == "adba"|| choiceString == "adca"|| choiceString == "adda"|| choiceString == "adea"|| choiceString == "adfa"|| choiceString == "adab"|| choiceString == "adac"|| choiceString == "adad"|| choiceString == "adae"|| choiceString == "adbb"|| choiceString == "adbc"|| choiceString == "adbd"|| choiceString == "adbe"|| choiceString == "adcc"|| choiceString == "adcd"|| choiceString == "adce"|| choiceString == "addd"|| choiceString == "adde"|| choiceString == "adee"|| choiceString == "adef" || choiceString == "adfe"|| choiceString == "aded"|| choiceString == "adeb"|| choiceString == "adec"|| choiceString == "aded"|| choiceString == "adcb"|| choiceString == "addb"|| choiceString == "addc"|| choiceString == "adfb"|| choiceString == "adfc"|| choiceString == "adfd") { // If user chooses the fourth choice the most, this outcome will be displayed.
+    answerbox.innerHTML = "<b>Canada</b> is the country that you most like to travel because it is the only country located in North America.";
+  } 
+  else{
+    answerbox.innerHTML = "It's hard to say. You have to redo the questionnaire again because you seem to have contradictory preferences.";
+  } 
   // If you add more choices, you must add another response below.
 }
 
@@ -131,79 +162,94 @@ function resetAnswer() {
 							<!-- Section -->
 								<section>
 									<div id="assessment">
-  <h1>Are you a suitable candidate to join WHS?</h1>
-  <p>Take this questionnaire to find out!</p><br>
+   <h1>Which country best fits you? 
+</h1>
+  <p>Take this questionnaire to find out!</p>
   
   <form id="quiz">
     <!-- Question 1 -->
-    <h2>How old are you?</h2>
+    <h2>Do you prefer  a slower or faster pace of life?</h2>
     <!-- Here are the choices for the first question. Each input tag must have the same name. For this question, the name is q1. -->
     <!-- The value is which answer the choice corresponds to. -->
     <label><input type="radio" name="q1" value="c1">
-      Aged 11 to 17
-    </label><br />
-    <label><input type="radio" name="q1" value="c2">
-      Aged 18 to 24
-    </label><br />
-    <label><input type="radio" name="q1" value="c3">
-      Aged 25 to 31
-    </label><br />
-    <label><input type="radio" name="q1" value="c4">
-      Aged 32 or above 
-    </label><br /><br>
-
-    <!-- Question 2 -->
-    <h2>How much do you have in your saving account?</h2>
-    <!-- Here are the choices for the second question. Notice how each input tag has the same name (q2), but a different name than the previous question. -->
-    <label><input type="radio" name="q2" value="c1">
-      HK$0 - HK$4,999
-    </label><br />
-    <label><input type="radio" name="q2" value="c2">
-      HK$5,000 - HK$9,999
-    </label><br />
-    <label><input type="radio" name="q2" value="c3">
-      HK$10,000 - HK$14,999
-    </label><br />
-    <label><input type="radio" name="q2" value="c4">
-      HK$15,000 or above
-    </label><br /><br>
-    
-    <!-- Question 3 -->
-    <h2>Do you prefer a slower or faster pace of life? </h2>
-    <!-- Choices for the third question -->
-    <label><input type="radio" name="q3" value="c1">
       Slower
     </label><br />
-    <label><input type="radio" name="q3" value="c2">
+    <label><input type="radio" name="q1" value="c2">
       Faster
-    </label><br /><br>
+    </label><br />
+    <br>
+
+    <!-- Question 2 -->
+    <h2>Which continent do you prefer? </h2>
+    <!-- Here are the choices for the second question. Notice how each input tag has the same name (q2), but a different name than the previous question. -->
+    <label><input type="radio" name="q2" value="c1">
+      Oceania 
+    </label><br />
+    <label><input type="radio" name="q2" value="c2">
+      Asia
+    </label><br />
+    <label><input type="radio" name="q2" value="c3">
+      Europe
+    </label><br />
+    <label><input type="radio" name="q2" value="c4">
+      North America 
+    </label><br />
+    <br>
+    
+    <!-- Question 3 -->
+    <h2>What is the first thing you look for when considering the destination?</h2>
+    <!-- Choices for the third question -->
+    <label><input type="radio" name="q3" value="c1">
+      Convenience
+    </label><br />
+    <label><input type="radio" name="q3" value="c2">
+      Communication / language
+    </label><br />
+    <label><input type="radio" name="q3" value="c3">
+      Cost of living
+    </label><br />
+    <label><input type="radio" name="q3" value="c4">
+      Culture / heritage
+    </label><br />
+    <label><input type="radio" name="q3" value="c5">
+      Nature
+    </label><br />
+    <label><input type="radio" name="q3" value="c6">
+      Security
+    </label><br />
+    <br>
     
     <!-- Question 4 -->
-    <h2>How willing are you to step outside your comfort zone and take up the challenges? </h2>
+    <h2>What industry do you want to work in? </h2>
     <!-- Choices for the fourth question -->
     <label><input type="radio" name="q4" value="c1">
-      Very unwilling
+      Farming
     </label><br />
     <label><input type="radio" name="q4" value="c2">
-      Unwilling 
+      Food & drinks
     </label><br />
     <label><input type="radio" name="q4" value="c3">
-      Neutral
+      Sales & retail 
     </label><br />
     <label><input type="radio" name="q4" value="c4">
-      Willing
+      Tourism
     </label><br />
-     <label><input type="radio" name="q4" value="c5">
-      Very willing
+    <label><input type="radio" name="q4" value="c5">
+      Hospitality 
     </label><br />
+    <br>
     
-    <button type="submit" id="submit" onclick="tabulateAnswers()">Submit Your Answers</button>
-  <button type="reset" id="reset" onclick="resetAnswer()">Reset</button>
+    <button type="submit" id="submit" onclick="tabulateAnswers();return false;">Submit Your Answers</button>
+    <button type="reset" id="reset" onclick="resetAnswer();return false;">Reset</button>
   </form>
   
   
   <div id="answer">Your result will show up here!</div>
 </div>
+
+<article id="bottom">
+            <img id="bottom-image" src="http://res.cloudinary.com/dxg6sopth/image/upload/v1512249750/park-img_ssa6yl.gif">
+     </article>
 								</section>
 								<!-- Section -->
 								<section>
