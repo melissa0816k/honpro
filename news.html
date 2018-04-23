@@ -62,7 +62,107 @@
 
 									<!-- Content --><section class="inline">
 										<h2 id="content">More countries open up to young Hongkongers who are interested in joining working holiday scheme</h2>
-	
+	<div id="mybar01" style="width: 100% ;height:520px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('mybar01'));
+
+        // 指定图表的配置项和数据
+        var option = {
+    legend: {
+        bottom: 0,
+        data: ['New Zealand', 'Australia','Ireland','Germany','Japan','Canada','Korea','France','United Kingdom','Austria']
+    },
+    title : {
+        text: 'No. of WHV granted to Hongkongers from 2014 to 2016',
+        subtext: 'LegCo Report 2017'
+    },
+    tooltip : {
+        trigger: 'axis',
+        axisPointer : {            
+            type : 'shadow'        
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '10%',
+        containLabel: true
+    },
+    xAxis:  {
+        type: 'value'
+    },
+    yAxis: {
+        type: 'category',
+        data: ['2014','2015','2016']
+    },
+    series: [
+        {
+            name: 'New Zealand',
+            type: 'bar',
+            stack: '总量',
+            data: [403, 401, 400]
+        },
+        {
+            name: 'Australia',
+            type: 'bar',
+            stack: '总量',
+            data: [10511, 8503, 5269]
+        },
+        {
+            name: 'Ireland',
+            type: 'bar',
+            stack: '总量',
+            data: [220, 182, 191]
+        },
+        {
+            name: 'Germany',
+            type: 'bar',
+            stack: '总量',
+            data: [150, 212, 201]
+        },
+        {
+            name: 'Japan',
+            type: 'bar',
+            stack: '总量',
+            data: [820, 832, 901]
+        }, 
+        {
+            name: 'Canada',
+            type: 'bar',
+            stack: '总量',
+            data: [300, 163, 136]
+        },
+        {
+            name: 'Korea',
+            type: 'bar',
+            stack: '总量',
+            data: [274, 282, 260]
+        },
+        {
+            name: 'France',
+            type: 'bar',
+            stack: '总量',
+            data: [65, 54, 59]
+        },
+        {
+            name: 'United Kingdom',
+            type: 'bar',
+            stack: '总量',
+            data: [1054, 1236, 1153]
+        },
+        {
+            name: 'Austria',
+            type: 'bar',
+            stack: '总量',
+            data: [0, 24, 11]
+        }
+    ]
+};
+ // Use the option to display chart
+        var myChart1 = echarts.init(document.getElementById('mybar01'));
+        myChart1.setOption(option);
+    </script>
 									        <p>Despite the latest figures revealing a drop in the number of working holiday visa (WHV) granted to Hongkongers, more countries now offer WHVs to young Hongkongers.</p></br>
 							                        
                                                                                 <p>Under <a href="http://www.whs.gov.hk/en/workingholiday-overseas.php">the government’s working holiday scheme</a>, young locals are allowed to visit one of 13 partner countries (including Japan, South Korea, Austria, Australia, New Zealand, Ireland, England, Canada, Sweden, Germany, France, Hungry and the Netherland) for at least six months for work and pleasure. </p></br>
@@ -70,7 +170,7 @@
 						                                <p>Chak Wong, the commissioner for labour said that the scheme provided young people with a chance to enjoy holidaying and working abroad as well as strengthen cultural exchange. </p><br>
 						                                <p>“The Labour Department has been actively seeking the establishment of new WHS arrangements with more economies and expansion of the annual quota with the governments of existing WHS partner economies, so as to give Hong Kong youths more opportunities to choose and participate in WHS,” Wong said. </p><br>
 				                                                <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="mybar02" style="width: 100% ;height:550px;"></div>
+    <div id="mybar02" style="width: 100% ;height:520px;"></div>
     <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('mybar02'));
