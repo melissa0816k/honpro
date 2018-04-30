@@ -190,7 +190,7 @@ function tabulateAnswers() {
   else if (choiceString == "acab"|| choiceString == "acac"|| choiceString == "acad"|| choiceString == "acae"|| choiceString == "acbb"|| choiceString == "acbc"|| choiceString == "acbd"|| choiceString == "acbe"|| choiceString == "acdb"|| choiceString == "acdc"|| choiceString == "acdd"|| choiceString == "acba"|| choiceString == "acda"|| choiceString == "acaa") { // If user chooses the third choice the most, this outcome will be displayed.
     answerbox.innerHTML = "You may consider <b>United Kingdom</b> as your destination. Without doubts, European people tend to be less stressed out by working, compared to the workers in Hong Kong. And you can take advantage of your language ability when looking for a job in United Kingdom. If you can speak both English and Chinese, especially Mandarin, you'll get higher chance to be hired. Among all European countries, United Kingdom is probably an ideal destination for you.";
   }
-   else if (choiceString == "acfa"|| choiceString == "acfb"|| choiceString == "acfc"|| choiceString == "acfd"|| choiceString == "acfe" ) { // If user chooses the second choice the most, this outcome will be displayed.
+   else if (choiceString == "acfb"|| choiceString == "acfc"|| choiceString == "acfd"|| choiceString == "acfe" ) { // If user chooses the second choice the most, this outcome will be displayed.
     answerbox.innerHTML = "You have to be extra careful when you travel in Europe because we've seen terrorist attacks at major events, tourist sites, restaurants, commercial centres and transportation hubs. However, as long as you play safe, you'll be fine no matter where you are.";
   }
    else if (choiceString == "acca"|| choiceString == "accb"|| choiceString == "accc"|| choiceString == "accd"|| choiceString == "acce") { // If user chooses the second choice the most, this outcome will be displayed.
@@ -213,6 +213,9 @@ function tabulateAnswers() {
   }
   else if (choiceString == "acec"|| choiceString == "acde"|| choiceString == "aced") { // If user chooses the second choice the most, this outcome will be displayed.
     answerbox.innerHTML = "You may consider some cities in Unitied Kingdom and Germany like <b>Edinburgh and Heidelburg</b>. Their breathtaking scenery will surprise you.";
+  }
+  else if (choiceString == "acfa") { // If user chooses the second choice the most, this outcome will be displayed.
+    answerbox.innerHTML = "It will be safer if you stay in the rural area or countryside working in a farm. You can stay safe from terrorist attacks.";
   }
   else{
     answerbox.innerHTML = "It's hard to say. You have to do the questionnaire again because you seem to have contradictory preferences.";
